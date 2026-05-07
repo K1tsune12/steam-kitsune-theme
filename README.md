@@ -1,11 +1,13 @@
 <div align="center">
-<h3><img height="64px" src="https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/logo.webp"></h3>
+<h1>Kitsune Theme for Steam</h1>
+
+Personal fork of [SpaceTheme/Steam](https://github.com/SpaceTheme/Steam) with the old userpanel UI as the default option.
 
 [![Discord](https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/pills/community.webp)](https://discord.spacetheme.net)
 [![KoFi](https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/pills/support.webp)](https://kofi.spacetheme.net)
 [![Website](https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/pills/website.webp)](https://spacetheme.net)
 
-![GitHub Org's stars](https://img.shields.io/github/stars/SpaceTheme?style=for-the-badge&logo=github&labelColor=%23111111&color=%231e1e1e)
+<sub>Discord/KoFi/Website above point to the original SpaceTheme creators — please support them.</sub>
 <hr>
 </div>
 
@@ -37,10 +39,16 @@
 
 ## Installation
 1. Download [Millennium](https://docs.steambrew.app/users/installing) and follow the provided instructions to install the patcher.
-1. Open the [Theme Page](https://steambrew.app/theme?id=zQndv1rI0FXLh3QTRgOL) and click the Copy Theme ID button.
-1. Navigate to the Theme tab in the Millennium settings and select "Install Theme" and paste the Theme ID.
+1. Clone or download this repo and place it in your Millennium themes folder, OR install the upstream [SpaceTheme](https://steambrew.app/theme?id=zQndv1rI0FXLh3QTRgOL) and overlay this fork's files on top.
+1. Restart Steam.
 
-**Voilà! Enjoy the new look of your Steam!**
+**Voilà! Enjoy the old userpanel layout back.**
+
+## What's different in this fork
+- Old userpanel UI (margin-based, beside the sidebar header) is the default.
+- Toggleable via Millennium settings → General → Userpanel → "Old user panel UI" (yes/no).
+- All other upstream features and updates from SpaceTheme/Steam are preserved.
+- Branded as "Kitsune Theme" in titlebar and skin metadata.
 
 ## Info
 - Some things only work properly when steam is maximized on a 1920x1080p (or higher) monitor.

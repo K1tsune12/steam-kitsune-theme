@@ -1,14 +1,13 @@
 {
-    "name": "SpaceTheme for Steam",
-    "description": "Theme with a dark aesthetic and modular-inspired look, offering clarity, flexibility, and an enhanced user experience.",
-    "author": "SpaceEnergy",
+    "name": "Kitsune Theme for Steam",
+    "version": "1.0",
+    "description": "Personal fork of SpaceTheme with the old userpanel UI as default. Dark, modular look with clarity and flexibility.",
+    "author": "Kitsune",
     "github": {
-        "owner": "SpaceTheme",
-        "repo_name": "Steam"
+        "owner": "K1tsune12",
+        "repo_name": "steam-kitsune-theme"
     },
-    "funding": { "kofi": "spacetheme" },
-    "discord_support": { "inviteCodeExcludingLink": "7Zv8Xz3Vzn" },
-    "tags": [ "WIP", "Modular", "Dark", "Customizable"],
+    "tags": [ "WIP", "Modular", "Dark", "Customizable", "Fork"],
     "header_image": "https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/banner.webp",
     "splash_image": "https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/preview/preview.webp",
     "Conditions": {
@@ -192,6 +191,23 @@
                 "no": {},
                 "yes": {
                     "TargetCss": { "affects": ["^Steam$"], "src": "options/general/userpanel/buttons/friendList.css" }
+                }
+            }
+        },
+
+
+        "Old user panel UI": {
+            "description": "Use the old user panel UI (margins instead of bottom-left column layout)",
+            "default": "yes",
+            "tab": "General",
+            "section": "Userpanel",
+            "values": {
+                "no": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/general/userpanel/userpanel.css" },
+                    "TargetJs": { "affects": ["^Steam$"], "src": "options/general/userpanel/userpanel.js" }
+                },
+                "yes": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/general/userpanel/userpanelOld.css" }
                 }
             }
         },
