@@ -1,6 +1,6 @@
 {
     "name": "Kitsune Theme for Steam",
-    "version": "1.0",
+    "version": "1.0.1",
     "description": "Personal fork of SpaceTheme with the old userpanel UI as default. Dark, modular look with clarity and flexibility.",
     "author": "Kitsune",
     "github": {
@@ -203,8 +203,7 @@
             "section": "Userpanel",
             "values": {
                 "no": {
-                    "TargetCss": { "affects": ["^Steam$"], "src": "options/general/userpanel/userpanel.css" },
-                    "TargetJs": { "affects": ["^Steam$"], "src": "options/general/userpanel/userpanel.js" }
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/general/userpanel/userpanel.css" }
                 },
                 "yes": {
                     "TargetCss": { "affects": ["^Steam$"], "src": "options/general/userpanel/userpanelOld.css" }
