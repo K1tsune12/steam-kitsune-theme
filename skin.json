@@ -1,6 +1,6 @@
 {
     "name": "Kitsune Theme for Steam",
-    "version": "1.2.0",
+    "version": "1.2.0-beta",
     "description": "Personal fork of SpaceTheme with the old userpanel UI as default. Dark, modular look with clarity and flexibility.",
     "author": "Kitsune",
     "github": {
@@ -305,6 +305,21 @@
         },
 
 
+        "Mica Transparency": {
+            "description": "This changes the transparency of the Mica effect. The default is 50%.",
+            "default": 50,
+            "tab": "General",
+            "section": "Other",
+            "slider": {
+                "cssVariable": "--st-mica-transparency",
+                "min": 20,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+        },
+
+
         "Game Overlay": {
             "description": "Game Overlay from the concept",
             "default": "no",
@@ -458,6 +473,21 @@
                 "yes": {
                     "TargetCss": { "affects": ["^Steam$"], "src": "options/library/customArtwork.css" }
                 }
+            }
+        },
+
+
+        "Max Width": {
+            "description": "This changes the width of the store. Please note that if your lower the width too much, some elements might look weird or be misplaced, the theme is designed for the default width of 1200px.",
+            "default": 1200,
+            "tab": "Store",
+            "section": "Pinned",
+            "slider": {
+                "cssVariable": "--st-store-max-width",
+                "min": 960,
+                "max": 1200,
+                "step": 20,
+                "unit": "px"
             }
         },
 
