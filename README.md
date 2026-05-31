@@ -1,11 +1,9 @@
 <div align="center">
 <h1>Kitsune Theme for Steam</h1>
 
-Personal fork of [SpaceTheme/Steam](https://github.com/SpaceTheme/Steam) with the old userpanel UI as the default option.
+Personal fork of [SpaceTheme/Steam](https://github.com/SpaceTheme/Steam) with the anti-plugin block removed so LuaTools / manilua / lumea work.
 
-[![Discord](https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/pills/community.webp)](https://discord.spacetheme.net)
-[![KoFi](https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/pills/support.webp)](https://kofi.spacetheme.net)
-[![Website](https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/pills/website.webp)](https://spacetheme.net)
+[Community](https://discord.spacetheme.net) | [Support the Project](https://kofi.spacetheme.net) | [Website](https://spacetheme.net)
 
 <sub>Discord/KoFi/Website above point to the original SpaceTheme creators — please support them.</sub>
 <hr>
@@ -39,16 +37,15 @@ Personal fork of [SpaceTheme/Steam](https://github.com/SpaceTheme/Steam) with th
 
 ## Installation
 1. Download [Millennium](https://docs.steambrew.app/users/installing) and follow the provided instructions to install the patcher.
-1. Clone or download this repo and place it in your Millennium themes folder, OR install the upstream [SpaceTheme](https://steambrew.app/theme?id=zQndv1rI0FXLh3QTRgOL) and overlay this fork's files on top.
-1. Restart Steam.
+1. Clone or download this repo and place it in your Millennium themes folder (`C:\Program Files (x86)\Steam\steamui\skins\steam-kitsune-theme\`).
+1. Restart Steam and select "Kitsune Theme for Steam" in Millennium settings.
 
-**Voilà! Enjoy the old userpanel layout back.**
+**Voilà! Enjoy the new look of your Steam without piracy-plugin blocking.**
 
 ## What's different in this fork
-- Old userpanel UI (margin-based, beside the sidebar header) is the default.
-- Toggleable via Millennium settings → General → Userpanel → "Old user panel UI" (yes/no).
-- All other upstream features and updates from SpaceTheme/Steam are preserved.
+- **Anti-piracy CSS block removed** from all 8 files where SpaceTheme distributes it. LuaTools, manilua and lumea plugins work normally.
 - Branded as "Kitsune Theme" in titlebar and skin metadata.
+- Otherwise tracks SpaceTheme/Steam upstream verbatim (use the native upstream userpanel options as you'd normally do).
 
 ## Info
 - Some things only work properly when steam is maximized on a 1920x1080p (or higher) monitor.
@@ -59,29 +56,63 @@ Personal fork of [SpaceTheme/Steam](https://github.com/SpaceTheme/Steam) with th
 - [Size on Disk](https://steambrew.app/plugin?id=e73371b61eef)
 
 ## Roadmap
-- [ ] Store
-  - [ ] (WIP) Home
+<details>
+  <summary>Store</summary>
+  
+  - [ ] Home
   - [ ] (WIP) Navbar
   - [ ] Discovery
   - [ ] (WIP) Pointshop
-  - [ ] Stats
+  - [ ] Charts
   - [ ] (WIP) Gamepage
-  - [ ] Bundle info 
+  - [ ] Bundle info
+  - [ ] Hardware page
+  - [ ] The Steam Awards page
+  - [ ] Steam Replay page
+  - [ ] Steam Labs page
+  - [ ] Tags page
+  - [ ] Community recommends page
+  - [ ] Interactive recommender page
+  - [ ] Among friends page
+  - [ ] Steam curators page
+  - [ ] Gift cards page
   - [x] Cart
+  - [ ] Wishlist rework
   - [ ] (WIP) Checkout
   - [ ] Categories page
   - [ ] Personal calendar
   - [x] Search result list page
   - [ ] Settings
-- [ ] Community
+</details>
+<details>
+  <summary>Library</summary>
+
+  - [ ] (WIP) Collection page
+  - [ ] Gamepage rework
+</details>
+<details>
+  <summary>Community</summary>
+
   - [ ] Home
+  - [ ] Gamepage
+    - [ ] Screenshots
+    - [ ] Artworks
+    - [ ] Guides
+    - [ ] News
+    - [ ] Reviews
+    - [ ] Videos
+    - [ ] Workshop
+      - [ ] Item page
   - [ ] Discussions
   - [ ] Workshop
   - [ ] Market
     - [ ] (WIP) Home
     - [ ] (WIP) Item page
   - [ ] Broadcast
-- [ ] User
+</details>
+<details>
+  <summary>User</summary>
+
   - [ ] Profile
   - [ ] Activity
   - [ ] Friends
@@ -90,9 +121,17 @@ Personal fork of [SpaceTheme/Steam](https://github.com/SpaceTheme/Steam) with th
   - [ ] (WIP) Badges
   - [ ] Inventory
   - [ ] Booster Pack Creator
-- [ ] Friends & Chat
+</details>
+<details>
+  <summary>Friends & Chat</summary>
+
+  - [ ] Compact mode support
+  - [ ] Chat
   - [ ] Group chat
-- [ ] Big Picture Mode
+</details>
+<details>
+  <summary>Big Picture Mode</summary>
+
   - [ ] Home
   - [ ] Sidebar
   - [ ] Gamepage
@@ -102,7 +141,10 @@ Personal fork of [SpaceTheme/Steam](https://github.com/SpaceTheme/Steam) with th
   - [ ] Media
   - [ ] Downloads
   - [ ] Settings
-- [ ] Overlay
+</details>
+<details>
+  <summary>Overlay</summary>
+  
   - [ ] Game Overview
   - [ ] Achievements
   - [ ] Notes
@@ -110,12 +152,19 @@ Personal fork of [SpaceTheme/Steam](https://github.com/SpaceTheme/Steam) with th
   - [ ] Guides
   - [ ] Discussions
   - [ ] Recordings & Screenshots
-  - [ ] Friends & Chat
   - [ ] Browser
   - [ ] Controller Settings
-  - [ ] Settings
-- [ ] Other
+</details>
+<details>
+  <summary>Other</summary>
+
   - [ ] (WIP) Notifications
-  - [ ] Steam Settings
-  - [ ] Inputs (all types)
+  - [ ] (WIP) Steam Settings
+  - [ ] (WIP) Inputs (all types)
   - [ ] Recordings & Screenshots
+  - [ ] Update News
+  - [ ] Game server window
+  - [ ] Players window
+  - [ ] Add non-steam game window
+  - [ ] About Steam window
+</details>

@@ -30,7 +30,7 @@ waitForElement('.Rp8QOGJ2DypeDniMnRBhr').then(() => {
 
 
 
-// Store Sidebar Width half fix
+// Store Sidebar Width fix
 async function syncWidthIfTargetHidden() {
     const sourceClass = '._9sPoVBFyE_vE87mnZJ5aB';
     const targetClass = '.RGNMWtyj73_-WdhflrmuY';
@@ -243,8 +243,7 @@ setupGamesHovers();
 
 
 
-
-// New userpanel layout (only active when "Old user panel UI" toggle = "no",
+// New userpanel layout detection (only active when "Old user panel UI" toggle = "no",
 // i.e. when userpanel.css is loaded — detected via position: absolute on the userpanel element)
 async function isNewUserpanelLayout() {
     const userpanel = await waitForElement('._3cykd-VfN_xBxf3Qxriccm');
@@ -268,14 +267,20 @@ async function syncUserpanelWidth() {
         if (!sourceEl) return;
         const computedWidth = window.getComputedStyle(sourceEl).width;
         if (computedWidth && computedWidth !== 'auto') {
-            if (userpanelEl) userpanelEl.style.width = computedWidth;
-            if (downloadBarEl) downloadBarEl.style.width = computedWidth;
+            if (userpanelEl) {
+                userpanelEl.style.width = computedWidth;
+            }
+            if (downloadBarEl) {
+                downloadBarEl.style.width = computedWidth;
+            }
         }
     };
 
     const bindObservers = () => {
         if (!sourceEl || (!userpanelEl && !downloadBarEl)) return;
+
         sourceObserver?.disconnect();
+
         sourceObserver = new MutationObserver((mutations) => {
             for (const mutation of mutations) {
                 if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
@@ -283,7 +288,12 @@ async function syncUserpanelWidth() {
                 }
             }
         });
-        sourceObserver.observe(sourceEl, { attributes: true, attributeFilter: ['style'] });
+
+        sourceObserver.observe(sourceEl, {
+            attributes: true,
+            attributeFilter: ['style'],
+        });
+
         setWidth();
     };
 
@@ -291,7 +301,10 @@ async function syncUserpanelWidth() {
         sourceEl = document.querySelector(sourceClass);
         userpanelEl = document.querySelector(userpanelSelector);
         downloadBarEl = document.querySelector(downloadBarSelector);
-        if (sourceEl && (userpanelEl || downloadBarEl)) bindObservers();
+
+        if (sourceEl && (userpanelEl || downloadBarEl)) {
+            bindObservers();
+        }
     };
 
     window.addEventListener('resize', setWidth);
@@ -299,33 +312,67 @@ async function syncUserpanelWidth() {
     window.visualViewport?.addEventListener('resize', setWidth);
 
     const rootObserver = new MutationObserver(() => setupElements());
-    rootObserver.observe(document.body, { subtree: true, childList: true });
+
+    rootObserver.observe(document.body, {
+        subtree: true,
+        childList: true,
+    });
 
     setupElements();
 }
 syncUserpanelWidth();
 
 
+
+
 // Create userpanel button container and move buttons (only relevant in new layout)
 (async () => {
     if (!(await isNewUserpanelLayout())) return;
-
-    await waitForElement('._3x1HklzyDs4TEjACrRO2tB');
+    await waitForElement('._3x1HklzyDs4TEjACrRO2tB'); // wait for game panel to load first
+    // Userpanel
     const friendButton = await waitForElement('._1TdaAqMFadi0UTqilrkelR');
     const familyButton = document.querySelector('._13vrqU6oOqmmxrsZSW5O39');
     const parent = await waitForElement('._3cykd-VfN_xBxf3Qxriccm');
 
     const buttonContainer = document.createElement('div');
     buttonContainer.className = 'userpanel-buttoncontainer';
-
+  
     const buttons = parent.querySelectorAll('div._3cykd-VfN_xBxf3Qxriccm > div');
     const buttonsToMove = Array.from(buttons).filter((button) => {
         return button.querySelector('._2Szzh5sKyGgnLUR870zbDE');
     });
-
-    buttonsToMove.forEach((button) => buttonContainer.appendChild(button));
-
+  
+    buttonsToMove.forEach((button) => {
+        buttonContainer.appendChild(button);
+    });
+    
     buttonContainer.appendChild(friendButton);
-    if (familyButton) buttonContainer.appendChild(familyButton);
+    if (familyButton) {
+        buttonContainer.appendChild(familyButton);
+    }
+
+    // Create custom settings button
+    const settingsButton = document.createElement('div');
+    settingsButton.className = 'tool-tip-source Focusable st-steam-settings';
+    settingsButton.style.order = '999';
+    
+    const settingsIconWrapper = document.createElement('div');
+    settingsIconWrapper.className = '_2Szzh5sKyGgnLUR870zbDE _3LKQ3S_yqrebeNLF6aeiog';
+    
+    const settingsIcon = document.createElement('svg');
+    settingsIcon.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    settingsIcon.setAttribute('viewBox', '0 0 20 19');
+    settingsIcon.setAttribute('fill', 'none');
+    settingsIcon.setAttribute('class', '_34bQcTHo5QKzuujoEyU1tm');
+    
+    settingsIconWrapper.appendChild(settingsIcon);
+    settingsButton.appendChild(settingsIconWrapper);
+    
+    settingsButton.addEventListener('click', () => {
+        window.opener.SteamClient.URL.ExecuteSteamURL("steam://settings");
+    });
+    
+    buttonContainer.appendChild(settingsButton);
+    
     parent.appendChild(buttonContainer);
 })();
