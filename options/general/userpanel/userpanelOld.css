@@ -9,7 +9,7 @@
 & Download bar
 */
 ._3vCzSrrXZzZjVJFZNg9SGu {
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-color-2));
     box-shadow: none !important;
 }

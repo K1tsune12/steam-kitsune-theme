@@ -18,7 +18,7 @@ body .MillenniumDesktopSidebar {
     height: 64vh;
     margin: 16px 0;
     padding: 16px;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-color-1));
     transform: translate(-50%, -50%);
     transition: unset;
@@ -50,7 +50,7 @@ body .MillenniumDesktopSidebar {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     margin: 0;
     padding: calc(12px + 20px + 12px) 12px 12px;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-color-2));
 }
 
@@ -116,7 +116,7 @@ body .MillenniumDesktopSidebar {
 /** Content */
 .MillenniumDesktopSidebar .MillenniumDesktopSidebar_EditorContent {
     padding: 0;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
 }
 
 /*^ Section title */
@@ -127,7 +127,7 @@ body .MillenniumDesktopSidebar {
     font-weight: 600;
     line-height: 22px;
     letter-spacing: .5px;
-    border-radius: 8px 8px 0 0;
+    border-radius: var(--st-border-radius) var(--st-border-radius) 0 0;
     color: #fff;
     background-color: rgb(var(--st-color-2));
 }
@@ -142,7 +142,7 @@ body .MillenniumDesktopSidebar {
 .MillenniumDesktopSidebar .eKmEXJCm_lgme24Fp_HWt._2CCdODv0vfzOMrEBUzZwfI:has(+ .SettingsDialogSubHeader), .MillenniumDesktopSidebar .eKmEXJCm_lgme24Fp_HWt._2CCdODv0vfzOMrEBUzZwfI:nth-last-of-type(1) {
     margin-bottom: 12px;
     padding-bottom: 12px;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 var(--st-border-radius) var(--st-border-radius);
 }
 .MillenniumDesktopSidebar .eKmEXJCm_lgme24Fp_HWt._2CCdODv0vfzOMrEBUzZwfI:nth-last-of-type(1) {
     margin-bottom: 0;
@@ -156,7 +156,7 @@ body .MillenniumDesktopSidebar {
 .MillenniumDesktopSidebar .eKmEXJCm_lgme24Fp_HWt._2CCdODv0vfzOMrEBUzZwfI ._2VcTlXFC64Jtg9gvtT6cmY {
     position: relative;
     padding: 12px 12px 1px;
-    border-radius: 8px 8px 0 0;
+    border-radius: var(--st-border-radius) var(--st-border-radius) 0 0;
     background-color: rgb(var(--st-color-3));
 }
 .MillenniumDesktopSidebar .eKmEXJCm_lgme24Fp_HWt._2CCdODv0vfzOMrEBUzZwfI ._2VcTlXFC64Jtg9gvtT6cmY:has(.SliderControlPanelGroup) {
@@ -168,7 +168,7 @@ body .MillenniumDesktopSidebar {
 .MillenniumDesktopSidebar .eKmEXJCm_lgme24Fp_HWt._2CCdODv0vfzOMrEBUzZwfI ._1W1to_azoBRG95oNAFpf9Q {
     margin: -1px 0 0;
     padding: 6px 12px 12px;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 var(--st-border-radius) var(--st-border-radius);
     background-color: rgb(var(--st-color-3));
 }
 
@@ -248,12 +248,12 @@ body .MillenniumDesktopSidebar {
     font-weight: 600;
     line-height: 22px;
     letter-spacing: .5px;
-    border-radius: 8px 8px 0 0;
+    border-radius: var(--st-border-radius) var(--st-border-radius) 0 0;
     color: #fff;
     background-color: rgb(var(--st-color-2));
 }
 .MillenniumSettings.ModalDialogPopup .OX7USkJ5dDP_icD00Gal6 .aFxOaYcllWYkCfVYQJFs0 .SettingsDialogSubHeader:last-of-type {
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
 }
 
 
@@ -262,7 +262,7 @@ body .MillenniumDesktopSidebar {
 .MillenniumSettings.ModalDialogPopup .OX7USkJ5dDP_icD00Gal6 .aFxOaYcllWYkCfVYQJFs0 .eKmEXJCm_lgme24Fp_HWt {
     margin-bottom: 12px;
     padding: 0 12px 12px;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 var(--st-border-radius) var(--st-border-radius);
     background-color: rgb(var(--st-color-2));
 }
 .MillenniumSettings.ModalDialogPopup .OX7USkJ5dDP_icD00Gal6 .aFxOaYcllWYkCfVYQJFs0 .eKmEXJCm_lgme24Fp_HWt:nth-child(2) {
@@ -294,7 +294,7 @@ body .MillenniumDesktopSidebar {
 .MillenniumSettings.ModalDialogPopup .OX7USkJ5dDP_icD00Gal6 .aFxOaYcllWYkCfVYQJFs0 .eKmEXJCm_lgme24Fp_HWt.MillenniumThemes_ThemeItem ._2VcTlXFC64Jtg9gvtT6cmY,
 .MillenniumSettings.ModalDialogPopup .OX7USkJ5dDP_icD00Gal6 .aFxOaYcllWYkCfVYQJFs0 .eKmEXJCm_lgme24Fp_HWt.MillenniumPlugins_PluginField ._2VcTlXFC64Jtg9gvtT6cmY {
     padding: 12px;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-color-3));
 }
 
@@ -339,7 +339,7 @@ body .MillenniumDesktopSidebar {
     margin: 0;
 }
 .MillenniumSettings.ModalDialogPopup .OX7USkJ5dDP_icD00Gal6 .aFxOaYcllWYkCfVYQJFs0 .eKmEXJCm_lgme24Fp_HWt .MillenniumColorPicker::-webkit-color-swatch {
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
 }
 
 
@@ -349,6 +349,6 @@ body .MillenniumDesktopSidebar {
     margin: 0 !important;
     margin-bottom: 12px !important;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-color-2));
 }

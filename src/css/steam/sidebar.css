@@ -12,7 +12,7 @@
     height: unset;
     margin-bottom: 16px;
     padding: 6px;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-color-2));
     box-shadow: none;
 }
@@ -26,7 +26,7 @@
     padding: 6px;
     text-transform: uppercase;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-color-1)) !important;
     transition: all 0.2s ease-in-out;
 }
@@ -71,7 +71,7 @@
     margin: 0;
     padding: 0;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-color-1));
     transition: all 0.2s ease-in-out;
 }
@@ -116,7 +116,7 @@
 ._3x1HklzyDs4TEjACrRO2tB ._1ZS_xta5HMXzR8JgxDH6n7 {
     display: block;
     padding: 6px 6px 0;
-    border-radius: 8px 8px 0 0;
+    border-radius: var(--st-border-radius) var(--st-border-radius) 0 0;
     background-color: rgb(var(--st-color-2));
 }
 
@@ -126,7 +126,7 @@
 */
 ._3x1HklzyDs4TEjACrRO2tB ._1ZS_xta5HMXzR8JgxDH6n7 ._2PF_m-I5yte3WnQhpcz8RC {
     padding: 6px;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-color-3));
     transition: all 0.2s ease-in-out;
 }
@@ -143,7 +143,7 @@
     justify-content: center;
     align-items: center;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-color-3));
     transition: all 0.2s ease-in-out;
 }
@@ -173,7 +173,7 @@
     width: 100%;
     margin: 0;
     padding: 6px;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-color-3));
     transition: all 0.2s ease-in-out;
 }
@@ -196,7 +196,7 @@
 
 /** Search input */
 ._3x1HklzyDs4TEjACrRO2tB ._20QAC4WMXm8qFE8waUT5oo ._12vo5L1hsNGdao6_ssuirS {
-    border-radius: 8px 0 0 8px;
+    border-radius: var(--st-border-radius) 0 0 var(--st-border-radius);
     background-color: rgb(var(--st-color-3));
 }
 ._3x1HklzyDs4TEjACrRO2tB ._20QAC4WMXm8qFE8waUT5oo ._12vo5L1hsNGdao6_ssuirS .DialogTextInputBase {
@@ -210,7 +210,7 @@
 
 /** Filter */
 ._3x1HklzyDs4TEjACrRO2tB ._20QAC4WMXm8qFE8waUT5oo .vCCmYvn9yQ_V8CpKupllU {
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 var(--st-border-radius) var(--st-border-radius) 0;
     background-color: rgb(var(--st-color-3)) !important;
 }
 ._3x1HklzyDs4TEjACrRO2tB ._20QAC4WMXm8qFE8waUT5oo .vCCmYvn9yQ_V8CpKupllU:hover {
@@ -228,7 +228,7 @@
     margin: 0 12px 6px;
     width: calc(100% - 36px);
     height: 4px;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-color-1));
 }
 
@@ -238,8 +238,23 @@
 & Game list
 */
 ._3x1HklzyDs4TEjACrRO2tB ._1ijTaXJJA5YWl_fW2IxcaT {
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 var(--st-border-radius) var(--st-border-radius);
     background-color: rgb(var(--st-color-2));
+}
+
+/*
+& Download bar margin (new userpanel layout only — body.QsvsRVwbsApgKt1MhM0fz
+  is the class Steam adds when the new UI is active; these rules are no-ops
+  under the old UI default this fork ships with)
+*/
+body.QsvsRVwbsApgKt1MhM0fz:has(._3E5iVG630BkOHTaJJaMEMw) ._1ijTaXJJA5YWl_fW2IxcaT {
+    margin-bottom: calc(90px + 6px + 44px + 16px);
+}
+body.QsvsRVwbsApgKt1MhM0fz:has(._1_yS5UP7el0aN4vntx3dx .wi0pDywRgOCxhG7OqQNaA):has(._3E5iVG630BkOHTaJJaMEMw) ._1ijTaXJJA5YWl_fW2IxcaT {
+    margin-bottom: calc(90px + 6px + 49px + 44px + 16px + 6px);
+}
+body.QsvsRVwbsApgKt1MhM0fz:has(._1_yS5UP7el0aN4vntx3dx .wi0pDywRgOCxhG7OqQNaA) ._1ijTaXJJA5YWl_fW2IxcaT {
+    margin-bottom: calc(90px + 6px + 49px + 16px);
 }
 
 /*
@@ -257,7 +272,7 @@
     align-items: center;
     margin: 0 0 0 6px;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background: none;
     background-color: rgb(var(--st-color-1));
     box-shadow: unset;
@@ -294,7 +309,7 @@
 ._3x1HklzyDs4TEjACrRO2tB ._2-O4ZG0KrnSrzISHBKctFQ {
     margin: 0 0 0 6px;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
 }
 ._3x1HklzyDs4TEjACrRO2tB ._2-O4ZG0KrnSrzISHBKctFQ:hover,
 ._3x1HklzyDs4TEjACrRO2tB ._2-O4ZG0KrnSrzISHBKctFQ :hover {
@@ -374,7 +389,7 @@
     margin: auto 6px;
     width: 4px;
     height: 240px;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-accent-1));
     transition: all 0.2s ease-in-out;
 }

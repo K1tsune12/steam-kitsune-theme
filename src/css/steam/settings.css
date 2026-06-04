@@ -71,11 +71,11 @@
     margin: 0 !important;
     padding: 12px;
     line-height: unset;
-    border-radius: 8px 8px 0 0;
+    border-radius: var(--st-border-radius) var(--st-border-radius) 0 0;
     background-color: rgb(var(--st-color-2));
 }
 .ModalDialogPopup .OX7USkJ5dDP_icD00Gal6 .aFxOaYcllWYkCfVYQJFs0 .SettingsDialogSubHeader:last-of-type {
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
 }
 
 
@@ -124,7 +124,7 @@
 .ModalDialogPopup .OX7USkJ5dDP_icD00Gal6 .aFxOaYcllWYkCfVYQJFs0 .eKmEXJCm_lgme24Fp_HWt.MillenniumThemes_ThemeItem ._2VcTlXFC64Jtg9gvtT6cmY,
 .ModalDialogPopup .OX7USkJ5dDP_icD00Gal6 .aFxOaYcllWYkCfVYQJFs0 .eKmEXJCm_lgme24Fp_HWt.MillenniumPlugins_PluginField ._2VcTlXFC64Jtg9gvtT6cmY {
     padding: 12px;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-color-3));
 }
 
@@ -173,7 +173,7 @@
     margin: 0;
 }
 .ModalDialogPopup .OX7USkJ5dDP_icD00Gal6 .aFxOaYcllWYkCfVYQJFs0 .eKmEXJCm_lgme24Fp_HWt .MillenniumColorPicker::-webkit-color-swatch {
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
 }
 
 
@@ -183,6 +183,6 @@
     margin: 0 !important;
     margin-bottom: 12px !important;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: var(--st-border-radius);
     background-color: rgb(var(--st-color-2));
 }
