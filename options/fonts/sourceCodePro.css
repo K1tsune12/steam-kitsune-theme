@@ -1,4 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-* {
+*:not(.fa-solid):not(.fa-regular):not(.fa-brands):not(.fa-light):not(.fa-thin):not(.fa-duotone):not(.fas):not(.far):not(.fab):not(.fal):not(.fad) {
   font-family: 'Source Code Pro', monospace !important;
 }

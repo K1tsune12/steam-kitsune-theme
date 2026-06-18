@@ -1,4 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@100..900&display=swap');
-* {
+*:not(.fa-solid):not(.fa-regular):not(.fa-brands):not(.fa-light):not(.fa-thin):not(.fa-duotone):not(.fas):not(.far):not(.fab):not(.fal):not(.fad) {
   font-family: 'Google Sans', sans-serif !important;
 }

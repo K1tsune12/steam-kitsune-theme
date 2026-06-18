@@ -8,22 +8,22 @@
 
 /* Scrollbar */
 *::-webkit-scrollbar {
-    width: 14px !important;
+    width: 16px !important;
 }
-  
+
 *::-webkit-scrollbar-track {
     border-radius: var(--st-border-radius) !important;
 }
-  
+
 *::-webkit-scrollbar-thumb {
     border-radius: var(--st-border-radius) !important;
-    border: 4px solid transparent !important;
+    border: 5px solid transparent !important;
     background-clip: content-box !important;
     background-color: rgb(var(--st-accent-1)) !important;
 }
-  
+
 *::-webkit-scrollbar-thumb:hover {
-    border: 3px solid transparent !important;
+    border: 4px solid transparent !important;
     background-color: rgb(var(--st-accent-2)) !important;
 }
 
@@ -86,4 +86,14 @@ div.ModalPosition_TopBar {
     opacity: 0 !important;
     width: 16px !important;
     height: 16px !important;
+}
+
+
+/* Links */
+body a[href]:not(:has(> *)) {
+    font-weight: 400 !important;
+    color: rgb(var(--st-blue)) !important;
+}
+body a[href]:not(:has(> *)):hover {
+    color: rgb(var(--st-blue-hover)) !important;
 }

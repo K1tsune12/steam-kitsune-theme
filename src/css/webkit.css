@@ -47,9 +47,6 @@
 
 
 
-
-
-
 /*
 & Base
 */
@@ -388,7 +385,7 @@ html body.v6 .StoreMenuLoadingPlaceholder .PlaceholderInner {
 /* Price Discount */
 .h2B3SGR_w4RWdrnsRZEcD ._16jZ3HEbtaJTl80pQINN2Y ._2GxMhpm7OC2WWXN_wjgA78 ._1D5FETA8rX0cTIhaC9W2wD .KG1rpRyNTy_2__H8GV8__ ._2lQxRlo1DQ1PN08TYTil2L,
 .gQWgnAxVrOM- .qxuaSNtrNvE- .ZaHNigq8DMs- .KdTm5UPqjB8- ._10mrxtI-TKw- .bWcsWKN3D84- {
-    border-radius: 4px;
+    border-radius: calc(var(--st-border-radius) / 2);
 }
 
 
@@ -485,7 +482,7 @@ html body.v6 .StoreMenuLoadingPlaceholder .PlaceholderInner {
 .h2B3SGR_w4RWdrnsRZEcD ._16jZ3HEbtaJTl80pQINN2Y ._2GxMhpm7OC2WWXN_wjgA78 ._1XK1v4pD2FgxJn9Nxovpup ._2tdhUFMMsjGr_BI7uMcoWy ._3pCOrLJqmsJ4tQlUamNYyl,
 .gQWgnAxVrOM- .qxuaSNtrNvE- .ZaHNigq8DMs- .sGePe4nq0rw- ._8A-51zo2cfU- .vWc3tHbEDb0- {
     padding: 4px 6px;
-    border-radius: 4px;
+    border-radius: calc(var(--st-border-radius) / 2);
     color: #ffff;
     background-color: rgb(var(--st-color-5));
 }
@@ -658,13 +655,15 @@ html body.v6 .StoreMenuLoadingPlaceholder .PlaceholderInner {
 */
 html body.v6 ._2R1rYdwKuMFLsEb4WvJYdD,
 html body.v6 .broadcast_live_stream_icon {
+    top: 6px;
+    left: 6px;
     display: inline-flex;
     height: max-content;
     margin-right: 12px;
     padding: 6px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
-    line-height: 13px;
+    line-height: 8px;
     letter-spacing: 0px;
     border: 3px solid rgb(var(--st-red));
     border-radius: var(--st-border-radius);
@@ -674,15 +673,222 @@ html body.v6 .broadcast_live_stream_icon {
     box-shadow: unset;
 }
 
+html body.v6 .ds_flagged ._2R1rYdwKuMFLsEb4WvJYdD,
+html body.v6 .ds_flagged .broadcast_live_stream_icon {
+    left: calc(6px + 26px + 6px);
+}
+
 html body.v6 ._2R1rYdwKuMFLsEb4WvJYdD::before,
 html body.v6 .broadcast_live_stream_icon::before {
     content: "";
     display: flex;
-    width: 12px;
-    height: 12px;
-    margin-right: 6px;
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
     border-radius: 80px;
     background-color: rgb(var(--st-red));
+}
+
+
+
+
+/*
+& Reviews
+*/
+/** Negative */
+html body.v6 .game_review_summary  {
+    font-weight: 600;
+    color: rgb(var(--st-red));
+}
+
+
+/** Mixed */
+html body.v6 .game_review_summary.mixed {
+    color: rgb(var(--st-yellow));
+}
+
+
+/** Positive */
+html body.v6 .game_review_summary.positive {
+    color: rgb(var(--st-green));
+}
+
+
+/** No/not enough reviews */
+html body.v6 .game_review_summary.no_reviews,
+html body.v6 .game_review_summary.not_enough_reviews {
+    color: #929396;
+}
+
+
+
+
+/*
+& DS option
+*/
+html body.v6 .ds_options {
+    right: -5px !important;
+}
+
+
+html body.v6 .ds_options>div {
+    top: 6px;
+    right: 6px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: var(--st-border-radius);
+    background: unset;
+    background-color: rgb(var(--st-color-5));
+    box-shadow: 0px 4px 8px 0px rgba(var(--st-background), 0.5);
+}
+
+html body.v6 .ds_options>div::before {
+    content: "\e833";
+    font-size: 18px;
+    color: #8e8e8e;
+    font-family: FluentSystemIcons-Filled !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+html body.v6 .ds_options>div:hover::before {
+    color: #fff;
+}
+
+
+/*
+!  Tooltip/Menu
+*/
+html body.v6 .ds_options_tooltip {
+    min-width: unset !important;
+    max-height: 90%;
+    padding: 6px !important;
+    border: 3px solid rgb(var(--st-color-5)) !important;
+    border-radius: var(--st-border-radius);
+    background: unset;
+    background-color: rgb(var(--st-color-3));
+}
+
+
+/** Items */
+html body.v6 .ds_options_tooltip .option {
+    margin: 0;
+    padding: 6px 12px;
+    font-weight: 500;
+    border-radius: var(--st-border-radius);
+    color: #9c9c9c;
+}
+html body.v6 .ds_options_tooltip .option:hover {
+    color: #fff;
+    background-color: rgb(var(--st-color-2));
+}
+
+
+
+
+/*
+& DS flags
+*/
+/** Owned */
+html body.v6 .ds_owned_flag {
+    position: absolute !important;
+    top: 6px;
+    left: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: unset !important;
+    width: 26px;
+    height: 26px !important;
+    padding: 0px !important;
+    font-size: 0 !important;
+    border-radius: var(--st-border-radius) !important;
+    background: unset;
+    background-color: rgb(var(--st-green)) !important;
+}
+html body.v6 .ds_owned_flag::before {
+    content: "\f4dd";
+    position: absolute;
+    font-size: 16px;
+    color: #fff;
+    font-family: FluentSystemIcons-Filled !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/** In Wishlist */
+html body.v6 .ds_wishlist_flag {
+    position: absolute !important;
+    top: 6px;
+    left: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: unset !important;
+    width: 26px;
+    height: 26px !important;
+    padding: 0px !important;
+    font-size: 0 !important;
+    border-radius: var(--st-border-radius) !important;
+    background: unset;
+    background-color: rgb(var(--st-blue)) !important;
+}
+html body.v6 .ds_wishlist_flag::before {
+    content: "\f1f6";
+    position: absolute;
+    font-size: 16px;
+    color: #fff;
+    font-family: FluentSystemIcons-Filled !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+/*
+& Carousel container
+*/
+.carousel_container .carousel_thumbs {
+    display: flex;
+    gap: 6px;
+    width: fit-content;
+    min-height: unset;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 12px 16px;
+    border-radius: 100px;
+    background-color: rgb(var(--st-color-2), .8);
+}
+
+.carousel_container .carousel_thumbs > div {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    border-radius: 8px;
+    background-color: rgb(var(--st-color-5));
+    transition: all 0.3s ease-in-out;
+}
+
+.carousel_container .carousel_thumbs > div.focus {
+    width: 24px;
+    background-color: rgb(var(--st-accent-1));
 }
 
 

@@ -13,6 +13,11 @@ button span,
 }
 
 
+body button.DialogButton {
+    margin: 0;
+}
+
+
 
 
 
