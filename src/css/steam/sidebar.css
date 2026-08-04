@@ -361,7 +361,7 @@
 
 /** Icon */
 ._2-O4ZG0KrnSrzISHBKctFQ .ga1hyw11cdBVodrCAidPF ._3d_bT685lnWotXxgzKW6am.yDr03475kalWBTwAE-Rnw {
-    border-radius: 4px !important;
+    border-radius: calc(var(--st-border-radius) / 2) !important;
 }
 
 

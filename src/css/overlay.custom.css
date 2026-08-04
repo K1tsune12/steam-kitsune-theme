@@ -92,7 +92,7 @@ body.QsvsRVwbsApgKt1MhM0fz.DesktopUI::after {
     background-color: rgb(var(--st-color-5));
 }
 ._3OzkVrQFFPv0aV41N4MrHV .fbu3l7kPiBeb3EKCjIb8n ._3ZLaTxSHxeGcoKlIy_-Z0L._1BXjK5v8XI_SEhGola5ftn {
-    border-radius: 16px;
+    border-radius: calc(var(--st-border-radius) * 2);
 }
 
 

@@ -175,14 +175,14 @@
     bottom: 12px;
     margin: 0;
     padding: 4px 12px 4px 4px;
-    border-radius: 4px;
+    border-radius: calc(var(--st-border-radius) / 2);
     background-color: rgb(var(--st-color-2));
 }
 ._3_xMyCJAh_Dv99KgZ54P3j:hover {
     background-color: rgb(var(--st-color-6));
 }
 ._3tdftHFf8tvdJW34S-KwjR ._3d_bT685lnWotXxgzKW6am.yDr03475kalWBTwAE-Rnw {
-    border-radius: 4px !important;
+    border-radius: calc(var(--st-border-radius) / 2) !important;
 }
 
 

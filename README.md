@@ -19,6 +19,8 @@ A personal fork of [SpaceTheme/Steam](https://github.com/SpaceTheme/Steam). Same
 - Everything else follows SpaceTheme upstream.
 
 ## Changelog
+- v2.3.0 - Synced with upstream: Steam/Millennium settings pages reorganised, store wishlist header, collection sortings, startup window and several sidebar fixes.
+- v2.2.0 - Synced with upstream (29 commits) and fixed Font Awesome icons breaking with custom fonts.
 - v2.1.2 - Fixed the store home banner and discovery card.
 - v2.1.1 - Fixed extra empty space under the game list during downloads (old UI).
 - v2.1.0 - Added a border-radius slider, plus upstream fixes.

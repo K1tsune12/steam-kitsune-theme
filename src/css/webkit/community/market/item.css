@@ -228,7 +228,7 @@
 
 /* Item */
 .market_listing_iteminfo .market_commodity_orders_table td {
-    border-radius: 4px;
+    border-radius: calc(var(--st-border-radius) /2);
     background-color: rgb(var(--st-color-2));
 }
 
