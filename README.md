@@ -19,6 +19,7 @@ A personal fork of [SpaceTheme/Steam](https://github.com/SpaceTheme/Steam). Same
 - Everything else follows SpaceTheme upstream.
 
 ## Changelog
+- v2.4.0 - Synced with upstream: fixed sidebar width option, gift card button toggle, favourite friends status background, sidebar update indicator, panel resize rewrite and a global avatar status border.
 - v2.3.0 - Synced with upstream: Steam/Millennium settings pages reorganised, store wishlist header, collection sortings, startup window and several sidebar fixes.
 - v2.2.0 - Synced with upstream (29 commits) and fixed Font Awesome icons breaking with custom fonts.
 - v2.1.2 - Fixed the store home banner and discovery card.

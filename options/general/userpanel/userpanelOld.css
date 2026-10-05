@@ -1,4 +1,18 @@
 /*
+* Old user panel UI
+*
+* Loaded by the "Old user panel UI" option when set to "yes" (the default).
+* Keeps Steam's own layout, where the user panel and download bar sit in normal
+* flow and are positioned with margins, instead of the bottom-left column that
+* userpanel.css builds.
+*
+* The two files are mutually exclusive: exactly one is loaded. The runtime check
+* in src/js/libraryroot.custom.js (isNewUserPanelLayout) reads the user panel's
+* computed position to tell which one is active, so do not give the container a
+* position here.
+*/
+
+/*
 & Game list
 */
 ._1_yS5UP7el0aN4vntx3dx {
@@ -36,8 +50,9 @@
     width: 32px;
     height: 24px;
     padding: 0 !important;
-    border-radius: 2px;
-    background-color: rgba(103,112,123,.2);
+    border-radius: calc(var(--st-border-radius) / 4);
+    /* Steam's own button tint, kept verbatim so the old panel stays faithful */
+    background-color: rgba(103, 112, 123, .2);
 }
 ._3LKQ3S_yqrebeNLF6aeiog ._34bQcTHo5QKzuujoEyU1tm {
     top: unset;

@@ -141,6 +141,7 @@ body .a3nhjc9lykk- {
 }
 
 body .discount_block .discount_pct,
+.game_bg.application .game_description_column .discount_pct,
 body .a3nhjc9lykk- .XXn-kJ7FSrw- {
     height: unset !important;
     padding: 4px 6px !important;
@@ -153,6 +154,7 @@ body .a3nhjc9lykk- .XXn-kJ7FSrw- {
 }
 
 body .discount_block .discount_prices,
+.game_bg.application .game_description_column .discount_prices,
 body .a3nhjc9lykk- .ME2eMO7C1Tk- {
     display: flex !important;
     flex-direction: column !important;
@@ -163,6 +165,7 @@ body .a3nhjc9lykk- .ME2eMO7C1Tk- {
 }
 
 body .game_purchase_discount .discount_original_price,
+.game_bg.application .game_description_column .discount_original_price,
 body .a3nhjc9lykk- .ywNldZ-YzEE- {
     position: relative !important;
     top: 0 !important;
@@ -172,6 +175,7 @@ body .a3nhjc9lykk- .ywNldZ-YzEE- {
 }
 
 body .discount_block .discount_prices .discount_final_price,
+.game_bg.application .game_description_column .discount_final_price,
 body .a3nhjc9lykk- .DOnsaVcV0Is- {
     padding: 0 !important;
     font-size: 14px !important;
@@ -858,7 +862,7 @@ html body.v6 .ds_wishlist_flag {
     padding: 0px !important;
     font-size: 0 !important;
     border-radius: var(--st-border-radius) !important;
-    background: unset;
+    background: unset !important;
     background-color: rgb(var(--st-blue)) !important;
 }
 html body.v6 .ds_wishlist_flag::before {
@@ -881,19 +885,21 @@ html body.v6 .ds_wishlist_flag::before {
 /*
 & Carousel container
 */
-.carousel_container .carousel_thumbs {
+.carousel_container .carousel_thumbs,
+.carousel ._3HjnEmKg66o82ah74EIvmq {
     display: flex;
     gap: 6px;
     width: fit-content;
     min-height: unset;
     height: fit-content;
-    margin: 0 auto;
+    margin: 6px auto 12px;
     padding: 12px 16px;
     border-radius: 100px;
     background-color: rgb(var(--st-color-2), .8);
 }
 
-.carousel_container .carousel_thumbs > div {
+.carousel_container .carousel_thumbs > div,
+.carousel ._3HjnEmKg66o82ah74EIvmq > button {
     display: block;
     width: 12px;
     height: 12px;
@@ -903,9 +909,14 @@ html body.v6 .ds_wishlist_flag::before {
     transition: all 0.3s ease-in-out;
 }
 
-.carousel_container .carousel_thumbs > div.focus {
+.carousel_container .carousel_thumbs > div.focus,
+.carousel ._3HjnEmKg66o82ah74EIvmq > button.carousel__dot--selected {
     width: 24px;
     background-color: rgb(var(--st-accent-1));
+}
+
+.carousel ._3HjnEmKg66o82ah74EIvmq > button > svg {
+    display: none;
 }
 
 
@@ -999,6 +1010,7 @@ body.responsive_page .profile_small_header_bg .profile_small_header_additional .
 & Footer
 */
 html body.responsive_page #footer {
+    gap: 24px;
     width: var(--st-store-max-width);
     margin: 0 auto 16px;
     padding: 16px;

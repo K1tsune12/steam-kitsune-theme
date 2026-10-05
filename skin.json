@@ -1,6 +1,6 @@
 {
     "name": "Kitsune Theme for Steam",
-    "version": "2.3.0",
+    "version": "2.4.0",
     "description": "Personal fork of SpaceTheme. Dark, modular look with clarity and flexibility, anti-plugin block removed (LuaTools/manilua/lumea allowed).",
     "author": "Kitsune",
     "github": {
@@ -39,18 +39,6 @@
             }
         },
 
-        "Sidebar on right": {
-            "description": "Show the sidebar on the right side",
-            "default": "no",
-            "tab": "General",
-            "section": "Sidebar",
-            "values": {
-                "no": {},
-                "yes": {
-                    "TargetCss": { "affects": ["^Steam$"], "src": "options/general/sidebarOnRight.css" }
-                }
-            }
-        },
         "Always show sidebar": {
             "description": "Always show the sidebar don't matter on which page (Except the download page) \n[i]If you have this option disabled, the userpanel and download bar only show when you in library. I recommend to enable then the \"Sidebar only on hover\" option, to still have access to the userpanel and download bar in the store and community[/i]",
             "default": "yes",
@@ -60,6 +48,18 @@
                 "no": {},
                 "yes": {
                     "TargetCss": { "affects": ["^Steam$"], "src": "options/general/alwaysShowSidebar.css" }
+                }
+            }
+        },
+        "Sidebar on right": {
+            "description": "Show the sidebar on the right side",
+            "default": "no",
+            "tab": "General",
+            "section": "Sidebar",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/general/sidebarOnRight.css" }
                 }
             }
         },
@@ -73,6 +73,31 @@
                 "yes": {
                     "TargetCss": { "affects": ["^Steam$"], "src": "options/general/showSidebarOnHover.css" }
                 }
+            }
+        },
+        "Sidebar fixed width": {
+            "description": "This fixes the sidebar width",
+            "default": "no",
+            "tab": "General",
+            "section": "Sidebar",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/general/fixedSidebar.css" }
+                }
+            }
+        },
+        "Sidebar width": {
+            "description": "The width of the fixed sidebar \n[i]Default: 256px[/i]",
+            "default": 256,
+            "tab": "General",
+            "section": "Sidebar",
+            "slider": {
+                "cssVariable": "--st-fixed-sidebar-width",
+                "min": 256,
+                "max": 1600,
+                "step": 1,
+                "unit": "px"
             }
         },
         "Friend icon": {
@@ -323,6 +348,18 @@
                 "no": {},
                 "yes": {
                     "TargetCss": { "affects": ["https://.*\\.steampowered\\.com(/.*)?"], "src": "options/store/home/tabsSection.css" }
+                }
+            }
+        },
+        "Send a Gift Card button": {
+            "description": "Hide the Send a Gift Card button",
+            "default": "no",
+            "tab": "Store",
+            "section": "Home",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["https://.*\\.steampowered\\.com(/.*)?"], "src": "options/store/home/giftCardButton.css" }
                 }
             }
         },
@@ -630,6 +667,18 @@
         },
 
 
+        "Favorite friends status background": {
+            "description": "When the \"Compact favorite friends area\" is on then the cards will show a status background so you know if the user is online/offline/ingame",
+            "default": "yes",
+            "tab": "Friends & Chat",
+            "section": "Firends list",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": [".friendsui-container"], "src": "options/friendsAndChat/list/compactFavFriendsStatusBackground.css" }
+                }
+            }
+        },
         "Hide group chat": {
             "description": "Hides the group chat section in the friends list",
             "default": "no",
