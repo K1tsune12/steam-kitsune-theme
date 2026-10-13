@@ -17,6 +17,7 @@
     display: none !important;
 }
 
+
 .friendlist ._3h-QRJGxnVOIExtHD1R0f2 {
     opacity: 1 !important;
     box-sizing: border-box !important;
@@ -80,8 +81,10 @@
 
 
 /** Snooze Icon */
+/* Steam's own animated "zZ" next to the name of an away friend. Upstream hides
+   it; this fork keeps it, because the yellow ring alone does not say AFK. */
 .friendlist ._1DsumfIa3MlkzUV9EXY5W9 {
-    display: none;
+    display: flex;
 }
 
 

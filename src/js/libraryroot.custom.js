@@ -182,9 +182,11 @@ async function setupGamesHovers() {
             const separator = itemText.querySelector(separatorSelector);
 
             if (!itemText.dataset.stHoverText) {
-                let text = itemText.innerText;
-                if (separator) text += ` ${separator.textContent}`;
-                itemText.dataset.stHoverText = text;
+                // The separator is Steam's DownloadDash, which only ever separated the
+                // name from the download progress text. sidebar.css now renders that
+                // progress as an icon (font-size: 0), so there is nothing left for the
+                // dash to separate and appending it just leaves a trailing "-".
+                itemText.dataset.stHoverText = itemText.innerText;
             }
 
             const widthDiff = getOverflowWidth(item, itemText, separator);

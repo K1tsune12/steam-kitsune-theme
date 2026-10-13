@@ -88,6 +88,10 @@ div.ModalPosition_TopBar {
 
 /* Avatar */
 body .avatarHolder {
+    /* Steam sizes avatar slots with fixed width/height in content-box, so the
+       2px gutter below would grow every slot by 4px and get clipped by the
+       containers that use overflow: hidden. Keep the gutter inside the slot. */
+    box-sizing: border-box !important;
     transform: unset !important;
     padding: 2px !important;
 }
