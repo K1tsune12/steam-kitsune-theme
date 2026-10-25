@@ -53,6 +53,19 @@
 
 
 /*
+& Boot screen
+*/
+/* Styled from here because this window is matched by the ^Steam$ patch, not by
+   the login one. Steam ships the boot logo as a pure white silhouette
+   (images/steam_spinner.png); dimmed so it reads as a subtle grey. */
+.StatusThrobber img.Small,
+._3sa1NXudhvcc1U7HrlLdNQ img._1DWH_4M4yAq8O2T06-3ckY {
+    filter: brightness(0.35);
+}
+
+
+
+/*
 & Base
 */
 ._1ENHEsrSLcTRtPQFl1F-wL {

@@ -48,31 +48,12 @@
 /*
 ! Loading spinner
 */
-.Rp8QOGJ2DypeDniMnRBhr ._1DWH_4M4yAq8O2T06-3ckY {
-    display: none;
-}
-
-
-.Rp8QOGJ2DypeDniMnRBhr ._3CN5DkgNMvdtT9fJhNOj_v::before {
-    content: "";
+/* Upstream hid Steam's boot logo and drew its own ring stacked above it. The
+   ring is gone here; the logo stays and is dimmed instead. */
+.Rp8QOGJ2DypeDniMnRBhr img._1DWH_4M4yAq8O2T06-3ckY {
     display: block;
-    width: 54px;
-    height: 54px;
-    border: 8px solid rgba(var(--st-color-2));
-    border-top: 8px solid rgb(var(--st-accent-1));
-    border-radius: 50%;
-    animation: spin .6s linear infinite;
+    filter: brightness(0.5);
 }
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 
 /*
 ! Loading bar
@@ -383,15 +364,26 @@
 
 
 /* QR Divs */
+/* The QR is the one element here that opts out of the theme palette. Scanners
+   need dark modules on a light field plus a light quiet zone around them, and
+   accent-on-dark fails that. Scoped to the QR container, so the panel and the
+   rest of the login window stay themed. */
 .Rp8QOGJ2DypeDniMnRBhr .lat0M-V5X4uYd6Mpm1DJ1 .xlEVpBeYO1h2tOqErt9fj {
-    border: none;
+    /* Steam ships a 1.25em white border here as the QR quiet zone, and the
+       theme used to strip it with border: none, leaving the code flush against
+       the dark panel. Scanners need that light margin, so it is kept. */
+    border: 1.25em solid #fff;
+    border-radius: var(--st-border-radius);
+    background-color: #fff;
 }
 
+/*^ Light modules */
 .Rp8QOGJ2DypeDniMnRBhr .lat0M-V5X4uYd6Mpm1DJ1 .xlEVpBeYO1h2tOqErt9fj ._1YVDTFYSTDWouyIbRs_hN_:not(._1zNnNw2BDhrN6ML6YxBYJE) {
-    background-color: rgb(var(--st-color-4)) !important;
+    background-color: #fff !important;
 }
+/*^ Dark modules */
 .Rp8QOGJ2DypeDniMnRBhr .lat0M-V5X4uYd6Mpm1DJ1 .xlEVpBeYO1h2tOqErt9fj ._1YVDTFYSTDWouyIbRs_hN_._1zNnNw2BDhrN6ML6YxBYJE {
-    background-color: rgb(var(--st-accent-1)) !important;
+    background-color: #000 !important;
 }
 
 

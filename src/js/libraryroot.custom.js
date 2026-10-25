@@ -1,31 +1,10 @@
 import { waitForElement, createContainerTracker, getFiber, CssClassNames } from './utils.js';
 
-// Create Loading Screen
-const createLoadingDiv = () => {
-    const loadingDiv = document.createElement('div');
-    loadingDiv.id = 'st-loading-div';
-
-    // Radial Loader
-    const loadingIndicator = document.createElement('div');
-    loadingIndicator.className = 'st-radial-loader';
-
-    loadingDiv.appendChild(loadingIndicator);
-
-    // Apply to body
-    document.body.appendChild(loadingDiv);
-
-    // Timer
-    setTimeout(() => {
-        document.body.removeChild(loadingDiv);
-    }, 2500);
-};
-
-// Patch to body
-waitForElement(CssClassNames.HtmlRoot).then(() => {
-    if (!document.getElementById('st-loading-div')) {
-        createLoadingDiv();
-    }
-});
+// Loading screen: upstream injects #st-loading-div with its own radial spinner
+// over the whole window during startup. Steam already draws its logo there, and
+// the two end up stacked, so this fork leaves Steam's own loading alone.
+// The #st-loading-div rules in libraryroot.custom.css are inert without this and
+// are kept untouched, so that file stays identical to upstream for future syncs.
 
 
 

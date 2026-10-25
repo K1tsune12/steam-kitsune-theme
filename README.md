@@ -19,6 +19,7 @@ A personal fork of [SpaceTheme/Steam](https://github.com/SpaceTheme/Steam). Same
 - Everything else follows SpaceTheme upstream.
 
 ## Changelog
+- v2.5.0 - Synced with upstream: game sidebar on the downloads page, sidebar width now persists, darken sliders for library artwork and banners, and new options for the userpanel settings button, playbar info icons and full width link buttons. The login QR code is readable again, the theme's own loading spinners are gone in favour of Steam's, and the boot logo is dimmed.
 - v2.4.1 - Fixed avatars being clipped across the client, removed the stray dash after game names in the sidebar, and restored Steam's own sleep icon for away friends.
 - v2.4.0 - Synced with upstream: fixed sidebar width option, gift card button toggle, favourite friends status background, sidebar update indicator, panel resize rewrite and a global avatar status border.
 - v2.3.0 - Synced with upstream: Steam/Millennium settings pages reorganised, store wishlist header, collection sortings, startup window and several sidebar fixes.
