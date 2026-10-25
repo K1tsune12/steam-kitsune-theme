@@ -1,6 +1,6 @@
 {
     "name": "Kitsune Theme for Steam",
-    "version": "2.4.1",
+    "version": "2.5.0",
     "description": "Personal fork of SpaceTheme. Dark, modular look with clarity and flexibility, anti-plugin block removed (LuaTools/manilua/lumea allowed).",
     "author": "Kitsune",
     "github": {
@@ -40,7 +40,7 @@
         },
 
         "Always show sidebar": {
-            "description": "Always show the sidebar don't matter on which page (Except the download page) \n[i]If you have this option disabled, the userpanel and download bar only show when you in library. I recommend to enable then the \"Sidebar only on hover\" option, to still have access to the userpanel and download bar in the store and community[/i]",
+            "description": "Always show the sidebar don't matter on which page \n[i]If you have this option disabled, the userpanel and download bar only show when you in library. I recommend to enable then the \"Sidebar only on hover\" option, to still have access to the userpanel and download bar in the store and community[/i]",
             "default": "yes",
             "tab": "General",
             "section": "Sidebar",
@@ -194,6 +194,18 @@
                 "no": {},
                 "yes": {
                     "TargetCss": { "affects": ["^Steam$"], "src": "options/general/userpanel/buttons/friendList.css" }
+                }
+            }
+        },
+        "Settings button": {
+            "description": "Hide Settings button from userpanel \n[i]Only applies to the new user panel UI[/i]",
+            "default": "no",
+            "tab": "General",
+            "section": "Userpanel",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/general/userpanel/buttons/stSettings.css" }
                 }
             }
         },
@@ -477,6 +489,7 @@
         },
 
 
+
         "Steam-Custom-Artworks Support": {
             "description": "The best support for [url=https://spacetheme.net/#steam-custom-artworks]https://spacetheme.net/#steam-custom-artworks[/url]",
             "default": "no",
@@ -530,18 +543,45 @@
             }
         },
         "Darken not installed games": {
-            "description": "Darkens game cards when they are not installed",
-            "default": "yes",
+            "description": "Darkens game cards when they are not installed. 20% means darken 100% no darken \n[i]Default: 60%[/i]",
+            "default": 60,
             "tab": "Library",
             "section": "Home",
-            "values": {
-                "no": {
-                    "TargetCss": { "affects": ["^Steam$"], "src": "options/library/home/undarkUninstalled.css" }
-                },
-                "yes": {}
+            "slider": {
+                "cssVariable": "--st-darken-not-installed",
+                "min": 20,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+        },
+        "Darken installed games": {
+            "description": "Darkens game cards when they are installed. 20% means darken 100% no darken \n[i]Default: 100%[/i]",
+            "default": 100,
+            "tab": "Library",
+            "section": "Home",
+            "slider": {
+                "cssVariable": "--st-darken-installed",
+                "min": 20,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
             }
         },
 
+        "Darken gamepage banner": {
+            "description": "Darkens game banners when they are installed. 20% means darken 100% no darken \n[i]Default: 100%[/i]",
+            "default": 100,
+            "tab": "Library",
+            "section": "Gamepage",
+            "slider": {
+                "cssVariable": "--st-darken-banner",
+                "min": 20,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+        },
         "Banner position": {
             "description": "Change the position of the banner (applies to all banners)",
             "default": "Middle (default)",
@@ -629,6 +669,18 @@
                 }
             }
         },
+        "Hide playbar info icons": {
+            "description": "Hides the icons that are displayed in the playbar for the infos like playtime/...",
+            "default": "yes",
+            "tab": "Library",
+            "section": "Gamepage",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/library/gamepage/hideIconsInPlayPanel.css" }
+                }
+            }
+        },
         "Always show game infos": {
             "description": "Always show game infos on the game page",
             "default": "no",
@@ -650,6 +702,18 @@
                 "no": {},
                 "yes": {
                     "TargetCss": { "affects": ["^Steam$"], "src": "options/library/gamepage/gameInfoArtwork.css"}
+                }
+            }
+        },
+        "Links panel buttons": {
+            "description": "Show the links in the links panel (Store Page, DLC, Community Hub, ...) in full width",
+            "default": "no",
+            "tab": "Library",
+            "section": "Gamepage",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/library/gamepage/linksButtonFullWidth.css"}
                 }
             }
         },
