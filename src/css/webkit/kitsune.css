@@ -476,3 +476,77 @@ html body :is(.zrWiY5l1Qvs-, .bgorXAs2e8Y-, .FFdVb5PNBwQ-, .j8nIw0zXcJo-) {
 html body :is(.KWWCV87dpGo-, .D6w-d1v2-Vc-) {
     color: rgb(255, 255, 255, .85) !important;
 }
+
+
+
+/*
+& Store: points shop (React)
+  Redesigned by Steam, upstream's pointsshop.css no longer matches. Same
+  generated-class situation as the reviews, hence !important.
+*/
+/* Page background: Steam's pattern and blue radial glow */
+html body #points_shop_root .tzrApHrBQDw- {
+    background-image: none !important;
+}
+html body #points_shop_root .GRnRr6m2Ebs- {
+    border-radius: var(--st-border-radius);
+    background: rgb(var(--kt-glass-light)) !important;
+}
+/* Navy fade at the top of each section */
+html body #points_shop_root .yu4-si75KQE- {
+    background: none !important;
+}
+/* Left category menu */
+html body #points_shop_root .d7He2hxHNDQ- {
+    border-radius: var(--st-border-radius);
+    background: rgb(var(--kt-glass)) !important;
+}
+html body #points_shop_root .iC89KZRmD3g- {
+    color: rgb(var(--st-blue-hover)) !important;
+}
+/* Light-blue gradient titles */
+html body #points_shop_root :is(._3z-SJMDRMwU-, .T5b2NUonuC8-) {
+    background: linear-gradient(130deg, #fff, rgb(var(--st-blue-hover))) !important;
+    -webkit-background-clip: text !important;
+}
+/* Item cards and their blue corner glow */
+html body #points_shop_root .cL3tfa-JDBE- {
+    background: rgb(var(--kt-glass)) !important;
+}
+html body #points_shop_root .w6UtE24wq8w- {
+    background: linear-gradient(144.37deg, transparent 68%, rgb(var(--st-blue), .3) 114%) !important;
+}
+/* "How do points work?" and the small grey buttons */
+html body #points_shop_root ._7JSvJmQTuhw- {
+    border-color: rgb(var(--st-blue)) !important;
+    color: rgb(var(--st-blue-hover)) !important;
+    background: rgb(var(--kt-glass)) !important;
+}
+html body #points_shop_root ._7JSvJmQTuhw-:hover {
+    color: #fff !important;
+    background: rgb(var(--st-blue)) !important;
+}
+html body #points_shop_root .AqGaS--D2n0- {
+    background: rgb(var(--kt-glass)) !important;
+}
+html body #points_shop_root .AqGaS--D2n0-:hover {
+    background: rgb(var(--st-blue), .45) !important;
+}
+
+
+
+/*
+& Store: follow button and footer
+*/
+/* "Follow" (creators, curators); FollowButton is a stable readable class */
+html body .FollowButton {
+    border-radius: var(--st-border-radius);
+    background: rgb(var(--st-blue)) !important;
+}
+html body .FollowButton:hover {
+    background: rgb(var(--st-blue-hover)) !important;
+}
+/* New store footer: navy glass */
+html body footer._36eiL2GCxdc- {
+    background: rgb(var(--kt-glass)) !important;
+}
