@@ -1,3 +1,4 @@
+@import url("./kitsune-tokens.css");
 @import url("./inputs/inputs.css");
 @import url("./steam/modalDialogPopup.css");
 
@@ -15,6 +16,9 @@
 @import url("./overlay/screenshotManager.css");
 @import url("./overlay/settings.css");
 @import url("./overlay/webBrowser.css");
+
+/* Fork-local client fixes */
+@import url("./kitsune-client.css");
 
 
 

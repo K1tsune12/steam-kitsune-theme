@@ -1,0 +1,54 @@
+/*
+& Kitsune fork: client window fixes
+  Fork-local on purpose, imported last by regular.css. Swaps Steam's blues in
+  client dialogs for translucent black and the theme's purple (--st-blue).
+*/
+
+
+
+/*
+& Primary dialog button (Install, Confirm, ...)
+  Steam draws it as a light-to-dark blue gradient.
+*/
+body button.DialogButton.Primary,
+body button.DialogButton.Primary:enabled:active {
+    color: #fff;
+    background: rgb(var(--st-blue));
+}
+body button.DialogButton.Primary:hover,
+body button.DialogButton.Primary.gpfocus:not(.Disabled) {
+    color: #fff;
+    background: rgb(var(--st-blue-hover));
+}
+
+
+
+/*
+& Checkboxes: blue check mark
+*/
+body .DialogCheckbox .SVGIcon_DialogCheck path {
+    stroke: rgb(var(--st-blue-hover));
+}
+
+
+
+/*
+& Install dialog: drive list
+  FolderOption / Active / Focused from Steam's InstallRequestModal module.
+  Steam scopes these under .DesktopUI, hence the :root prefix.
+*/
+:root .DesktopUI .Oo5JPcEk_erKEYAzYp2nY {
+    color: #fff;
+    background: rgb(var(--kt-glass));
+}
+:root .DesktopUI .Oo5JPcEk_erKEYAzYp2nY:hover {
+    background: rgb(var(--st-blue), .35);
+}
+:root .DesktopUI .Oo5JPcEk_erKEYAzYp2nY._2-svusNL8L22pzjYeV4GMS {
+    color: #fff;
+    background: rgb(var(--st-blue), .5);
+}
+:root .DesktopUI .Oo5JPcEk_erKEYAzYp2nY.gkgG-dWgjpwS_aqlcMNTM {
+    color: #fff;
+    background: rgb(var(--st-blue));
+}

@@ -5,15 +5,7 @@
   (--st-blue). Review score colours (positive/mixed/negative) are kept, they
   carry meaning.
 */
-:root {
-    --kt-glass: 0, 0, 0, .35;          /* default surface: cards, bars, inputs */
-    --kt-glass-light: 0, 0, 0, .25;
-    --kt-glass-strong: 0, 0, 0, .45;
-    --kt-chip: 255, 255, 255, .08;     /* tags and small pills */
-    --kt-line: 255, 255, 255, .06;     /* dividers and subtle fills */
-    --kt-text-dim: 255, 255, 255, .5;
-    --kt-icon: 220, 220, 228;          /* grey-white icons */
-}
+/* Shared --kt-* tokens live in ../kitsune-tokens.css */
 
 
 
@@ -549,4 +541,22 @@ html body .FollowButton:hover {
 /* New store footer: navy glass */
 html body footer._36eiL2GCxdc- {
     background: rgb(var(--kt-glass)) !important;
+}
+
+
+
+/*
+& Store: search suggestions
+  The theme's 30% surface is unreadable over the store's busy capsules, so this
+  one gets a near-opaque dark glass with blur.
+*/
+html body .O2jUvAs3OiU-.O2jUvAs3OiU-,
+html body .SdFPqnbn0yI-.SdFPqnbn0yI- {
+    border-radius: var(--st-border-radius);
+    background-color: rgb(12, 12, 14, .94) !important;
+    backdrop-filter: blur(16px) !important;
+}
+html body .O2jUvAs3OiU- a.QHiQcR8jG10-:hover {
+    border-radius: var(--st-border-radius);
+    background: rgb(var(--st-blue), .3);
 }

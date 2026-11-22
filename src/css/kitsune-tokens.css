@@ -1,0 +1,14 @@
+/*
+& Kitsune fork: shared tokens
+  Imported by regular.css (client windows) and webkit.css (store/community)
+  so both sides use the same translucent surfaces.
+*/
+:root {
+    --kt-glass: 0, 0, 0, .35;          /* default surface: cards, bars, inputs */
+    --kt-glass-light: 0, 0, 0, .25;
+    --kt-glass-strong: 0, 0, 0, .45;
+    --kt-chip: 255, 255, 255, .08;     /* tags and small pills */
+    --kt-line: 255, 255, 255, .06;     /* dividers and subtle fills */
+    --kt-text-dim: 255, 255, 255, .5;
+    --kt-icon: 220, 220, 228;          /* grey-white icons */
+}

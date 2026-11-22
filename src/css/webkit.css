@@ -37,6 +37,7 @@
 @import url("./plugins/extendium/plugins.css");
 
 /* Fork-local fixes, kept out of upstream files so syncs stay clean */
+@import url("./kitsune-tokens.css");
 @import url("./webkit/kitsune.css");
 
 
