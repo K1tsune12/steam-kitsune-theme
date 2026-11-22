@@ -16,9 +16,11 @@ A personal fork of [SpaceTheme/Steam](https://github.com/SpaceTheme/Steam). Same
 ## What is different from SpaceTheme
 - The plugin-blocking code is removed, so LuaTools, manilua and lumea work.
 - Renamed to "Kitsune Theme" in the titlebar and settings.
+- Store and community pages are restyled in translucent black and purple instead of Steam blue, and the Mica blur reaches the friends list (with the Kitsune Mica plugin).
 - Everything else follows SpaceTheme upstream.
 
 ## Changelog
+- v2.6.0 - Synced with upstream (31 commits, including 659 renamed Steam classes). Store and community pages are now translucent black and purple: wishlist, reviews, points shop, friends, games, badges, discussions, market, activity, buttons and dropdowns. Purple install dialog, readable store search, flat sidebar game list again and a darker downloads header. Audit: removed about 2,100 lines of dead CSS and broken references, fixed the login window classes Steam renamed, and rebound two options that had stopped working.
 - v2.5.0 - Synced with upstream: game sidebar on the downloads page, sidebar width now persists, darken sliders for library artwork and banners, and new options for the userpanel settings button, playbar info icons and full width link buttons. The login QR code is readable again, the theme's own loading spinners are gone in favour of Steam's, and the boot logo is dimmed.
 - v2.4.1 - Fixed avatars being clipped across the client, removed the stray dash after game names in the sidebar, and restored Steam's own sleep icon for away friends.
 - v2.4.0 - Synced with upstream: fixed sidebar width option, gift card button toggle, favourite friends status background, sidebar update indicator, panel resize rewrite and a global avatar status border.
