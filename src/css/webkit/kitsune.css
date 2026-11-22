@@ -1,0 +1,311 @@
+/*
+& Kitsune fork: store and community fixes
+  Fork-local on purpose, so upstream syncs never touch this file.
+  Steam's own blues are swapped for the theme's dark surfaces and accent.
+  Review score colours (positive/mixed/negative) are kept, they carry meaning.
+*/
+
+
+
+/*
+& Native dropdowns
+  Checkout and account pages use plain <select>. Without a dark colour scheme
+  the opened list is drawn white while the text stays light, so it is unreadable.
+*/
+html body select {
+    color-scheme: dark;
+}
+html body select option,
+html body select optgroup {
+    color: #fff !important;
+    background-color: rgb(var(--st-color-2)) !important;
+}
+
+/* Steam's own scripted dropdown (payment method, country) */
+html body .dselect_container .dropcontainer ul,
+html body .dropdownhidden ul {
+    border: 1px solid rgb(var(--st-color-5));
+    background: rgb(var(--st-color-2)) !important;
+}
+html body .dselect_container .dropcontainer ul li a,
+html body .dropdownhidden ul li a {
+    color: #fff !important;
+    background: transparent !important;
+}
+html body .dselect_container .dropcontainer ul li a:hover,
+html body .dropdownhidden ul li a:hover {
+    background: rgb(var(--st-accent-1), .3) !important;
+}
+
+
+
+/*
+& Community: shared buttons
+*/
+/* Black glass with purple text, purple fill on hover */
+html body .btnv6_blue_hoverfade,
+html body .btn_grey_black,
+html body a.pagelink,
+html body .pagebtn {
+    border-radius: var(--st-border-radius);
+    /* Steam sets these colours with !important */
+    color: rgb(var(--st-blue-hover)) !important;
+    background: rgb(0, 0, 0, .35);
+}
+html body .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.disabled):hover,
+html body .btn_grey_black:hover,
+html body a.pagelink:hover,
+html body .pagebtn:not(.disabled):hover {
+    color: #fff !important;
+    background: rgb(var(--st-blue));
+}
+html body .btnv6_blue_hoverfade span,
+html body .btn_grey_black span {
+    color: inherit;
+    background: transparent;
+}
+html body .pagebtn.disabled {
+    opacity: .4;
+}
+
+/* "Back to top" on app hubs: Steam draws it from fixed-width images */
+html body .apphub_BackToTop a {
+    display: inline-block;
+    padding: 0 16px;
+    border-radius: var(--st-border-radius);
+    color: rgb(var(--st-blue-hover));
+    background: rgb(0, 0, 0, .45);
+    backdrop-filter: blur(8px);
+}
+html body .apphub_BackToTop a:hover {
+    color: #fff;
+    background: rgb(var(--st-blue));
+}
+html body .apphub_BackToTop a span {
+    width: auto;
+    white-space: nowrap;
+    background: none;
+}
+html body .apphub_BackToTop a :is(.leftcap, .rightcap) {
+    display: none;
+}
+html body .btn_darkblue_white_innerfade,
+html body .btn_darkblue_white_innerfade > span {
+    border-radius: var(--st-border-radius);
+    color: #fff;
+    background: rgb(var(--st-accent-1));
+}
+html body .btn_darkblue_white_innerfade:hover,
+html body .btn_darkblue_white_innerfade:hover > span {
+    background: rgb(var(--st-accent-2));
+}
+
+/* Active community tab in the top nav */
+html body .menuitem.supernav.supernav_active {
+    color: rgb(var(--st-accent-2));
+}
+
+
+
+/*
+& Community: friends page
+*/
+html body .profile_friends.title_bar {
+    border-radius: var(--st-border-radius);
+    background: rgb(0, 0, 0, .35);
+}
+/* Header behind the name: dark glass instead of Steam's blue highlight */
+html body .friends_header_bg {
+    background: rgb(0, 0, 0, .25);
+    backdrop-filter: blur(8px);
+}
+html body .friends_header_bg .friends_header_name a,
+html body .friends_header_bg a.whiteLink {
+    color: #fff;
+}
+html body .friends_nav .count,
+html body .friends_nav h4 {
+    color: rgb(255, 255, 255, .45);
+}
+
+
+
+/*
+& Community: profile sub-pages header (games, badges, ...)
+*/
+html body .profile_small_header_texture {
+    background: rgb(0, 0, 0, .35);
+}
+/* New React games page: same header, Steam draws it as a blue-grey gradient box */
+html body ._1WHxiF6PoO0- {
+    border-radius: var(--st-border-radius);
+    background: rgb(0, 0, 0, .35);
+    box-shadow: none;
+}
+
+
+
+/* Games page: achievement bars, the "all achievements" medal and the active tab */
+html body .Ipalm5ENV44- {
+    background-color: rgb(var(--st-blue));
+}
+html body .V3UcU547o9g- svg path[fill="#1A9FFF"] {
+    fill: rgb(var(--st-blue));
+}
+html body .aMOYGh7hnLQ-.xm0ps8RlGjM- {
+    border-bottom-color: rgb(var(--st-blue));
+}
+
+
+
+/*
+& Community: badges
+*/
+/* Levels from 100 up are a hexagon/shape sprite with fixed 32px cells. The
+   upstream 24px size cuts the sprite and leaves the number floating off it. */
+html body .maincontent .profile_xp_block_left .friendPlayerLevel[class*="00 lvl_plus"] {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+}
+html body .badge_row .badge_view_details,
+html body .badge_row .progress_info_bold {
+    color: rgb(var(--st-accent-2));
+}
+
+
+
+/*
+& Community: discussions
+*/
+html body .forum_topic,
+html body .forum_topic.unread {
+    border-radius: var(--st-border-radius);
+    background: rgb(0, 0, 0, .35);
+}
+html body .forum_topic:hover {
+    background: rgb(var(--st-accent-1), .2);
+}
+/* Unread topics keep a marker, as an accent edge instead of a blue fill */
+html body .forum_topic.unread {
+    box-shadow: inset 3px 0 0 rgb(var(--st-accent-1));
+}
+html body .forum_topic .forum_topic_op,
+html body .forum_topic .forum_topic_lastpost {
+    color: rgb(255, 255, 255, .55);
+}
+html body .forum_paging {
+    border-radius: var(--st-border-radius);
+    background: rgb(0, 0, 0, .35);
+}
+html body .discussionSearchTextContainer {
+    border-radius: var(--st-border-radius);
+    background: rgb(0, 0, 0, .35);
+}
+/* Selected subforum in the right column */
+html body .rightbox_list_selection_background {
+    border-radius: var(--st-border-radius);
+    background: rgb(var(--st-accent-1), .25);
+}
+html body .rightcol .rule {
+    background: rgb(255, 255, 255, .06);
+}
+html body .forum_paging_summary,
+html body .commentthread_pagelinks {
+    color: rgb(255, 255, 255, .45);
+}
+
+
+
+/*
+& Community: market
+*/
+html body #marketBetaNoteCtn {
+    border-radius: var(--st-border-radius);
+    background: rgb(var(--st-accent-1), .15);
+}
+html body .market_search_sidebar_section_tip_small {
+    color: rgb(255, 255, 255, .45);
+}
+
+
+
+/*
+& Store: wishlist
+  Steam renamed every class on this page, so upstream's wishlist.css no longer
+  matches anything. These target the current names.
+*/
+/* Game rows */
+html body .PE-3oq-yIvg-.Panel {
+    border-color: rgb(255, 255, 255, .04);
+    background: rgb(0, 0, 0, .35);
+}
+/* Tags and the "+" category button */
+html body .U3ndjc3qoW8-,
+html body .Vy3rNuKLunU- {
+    border-color: transparent;
+    color: rgb(255, 255, 255, .7);
+    background: rgb(255, 255, 255, .08);
+}
+html body .U3ndjc3qoW8-:hover,
+html body .Vy3rNuKLunU-:hover {
+    color: #fff;
+    background: rgb(var(--st-accent-1), .35);
+}
+/* Early access badge */
+html body span.O7UR3Sc3EmM-.O7UR3Sc3EmM- {
+    color: #fff;
+    background: rgb(var(--st-accent-1));
+}
+/* Search box, Options, Sort and Share buttons */
+html body .DFhzzTUhoEs- input.QoJP0e0vzFA- {
+    border-color: rgb(255, 255, 255, .08);
+    border-radius: var(--st-border-radius);
+    background: rgb(0, 0, 0, .35);
+}
+html body .DFhzzTUhoEs- input.QoJP0e0vzFA-:focus {
+    border-color: rgb(var(--st-accent-1));
+}
+html body .PzuczM6OUSY- {
+    background: rgb(0, 0, 0, .35);
+}
+html body .PzuczM6OUSY-:hover {
+    background: rgb(var(--st-accent-1), .35);
+}
+html body .PzuczM6OUSY-.ne-yAo3NTUE- {
+    color: rgb(var(--st-accent-2));
+}
+
+
+
+/*
+& Store: leftover native blues
+  Most store blue already comes from --st-blue, these are Steam's own.
+*/
+html body .app_tag,
+html body .glance_tags .app_tag,
+html body .game_area_details_specs_ctn .label,
+html body .deep_dive_tag,
+html body a.linkbar {
+    color: rgb(255, 255, 255, .75);
+    background: rgb(255, 255, 255, .08);
+}
+html body .app_tag:hover,
+html body .deep_dive_tag:hover,
+html body a.linkbar:hover {
+    color: #fff;
+    background: rgb(var(--st-accent-1), .35);
+}
+html body .deep_dive_key_tags,
+html body .home_page_content .carousel_items .info,
+html body .horizontalSlider___281Ls,
+html body .top_new_releases_date,
+html body .sale_capsule_carousel {
+    background: rgb(0, 0, 0, .35);
+}
+html body .game_page_autocollapse_readmore {
+    background: linear-gradient(90deg, transparent 0%, rgb(0, 0, 0, .6) 33%, rgb(0, 0, 0, .6) 100%);
+}
+html body .sysreq_tabs {
+    background: none;
+}

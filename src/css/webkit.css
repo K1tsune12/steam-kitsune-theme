@@ -46,6 +46,9 @@
 /*^ Extendium */
 @import url("./plugins/extendium/plugins.css");
 
+/* Fork-local fixes, kept out of upstream files so syncs stay clean */
+@import url("./webkit/kitsune.css");
+
 
 
 :root {
