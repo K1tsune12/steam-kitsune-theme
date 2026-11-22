@@ -52,3 +52,16 @@ body .DialogCheckbox .SVGIcon_DialogCheck path {
     color: #fff;
     background: rgb(var(--st-blue));
 }
+
+
+
+/*
+& Friends list and chat windows
+  With the dwmx option every surface drops to the Mica transparency (30% by
+  default), which is too see-through for a long list of names. The window
+  itself stays at 92% so the Mica blur only tints it; the inner panels keep
+  their own light surfaces on top.
+*/
+html.friendsui-container body {
+    background-color: rgb(10, 10, 10, .92) !important;
+}

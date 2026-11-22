@@ -47,6 +47,7 @@ html body .dropdownhidden ul li a:hover {
 */
 /* Black glass with purple text, purple fill on hover */
 html body .btnv6_blue_hoverfade,
+html body .btnv6_grey_black,
 html body .btn_grey_black,
 html body a.pagelink,
 html body .pagebtn {
@@ -58,6 +59,7 @@ html body .pagebtn {
 html body .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
 html body .btnv6_blue_hoverfade.btn_active,
 html body .btnv6_blue_hoverfade.active,
+html body .btnv6_grey_black:hover,
 html body .btn_grey_black:hover,
 html body a.pagelink:hover,
 html body .pagebtn:not(.disabled):hover {
@@ -66,6 +68,7 @@ html body .pagebtn:not(.disabled):hover {
     background: rgb(var(--st-blue)) !important;
 }
 html body .btnv6_blue_hoverfade span,
+html body .btnv6_grey_black span,
 html body .btn_grey_black span {
     color: inherit;
     background: transparent;
@@ -394,6 +397,16 @@ html body .apphub_CardRating.rateUp,
 html body .review_award_aggregated {
     color: rgb(var(--st-blue-hover));
 }
+/* Blue thumbs-up and award icons are images: shift them to purple.
+   Thumbs-down (red) is a different file and is left alone. */
+html body img[src*="icon_thumbsUp"],
+html body img[src*="award_icon_blue"] {
+    filter: hue-rotate(55deg) saturate(.85);
+}
+/* Active section tab (All, Screenshots, ...) */
+html body .apphub_sectionTab.active {
+    border-bottom-color: rgb(var(--st-blue));
+}
 html body .early_access_review {
     border-color: rgb(var(--st-blue));
     color: #fff;
@@ -530,13 +543,16 @@ html body #points_shop_root .AqGaS--D2n0-:hover {
 /*
 & Store: follow button and footer
 */
-/* "Follow" (creators, curators); FollowButton is a stable readable class */
+/* "Follow" (creators, curators, franchises): same black glass button as the rest.
+   FollowButton is a stable readable class */
 html body .FollowButton {
     border-radius: var(--st-border-radius);
-    background: rgb(var(--st-blue)) !important;
+    color: rgb(var(--st-blue-hover)) !important;
+    background: rgb(var(--kt-glass)) !important;
 }
 html body .FollowButton:hover {
-    background: rgb(var(--st-blue-hover)) !important;
+    color: #fff !important;
+    background: rgb(var(--st-blue)) !important;
 }
 /* New store footer: navy glass */
 html body footer._36eiL2GCxdc- {
