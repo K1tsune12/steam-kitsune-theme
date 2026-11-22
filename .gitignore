@@ -2,3 +2,4 @@
 metadata.json
 /Original
 .claude
+__pycache__/
