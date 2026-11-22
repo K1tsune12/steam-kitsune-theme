@@ -53,6 +53,40 @@
 
 
 /*
+& Sidebar game list (fork)
+*/
+/* Upstream's sidebar skin (c54e644) draws every game as its own card with a
+   4px gap. Keep the collection boxes but go back to a flat, continuous list. */
+._3x1HklzyDs4TEjACrRO2tB ._2-O4ZG0KrnSrzISHBKctFQ {
+    margin-bottom: 0;
+    padding: 2px 4px;
+    background-color: transparent;
+}
+._3x1HklzyDs4TEjACrRO2tB ._2-O4ZG0KrnSrzISHBKctFQ:hover {
+    font-weight: unset;
+    background-color: rgb(var(--st-color-3));
+}
+
+
+
+/*
+& Downloads page header (fork)
+*/
+/* Translucent black instead of Steam's navy panel and blue placeholder gradient.
+   The section is tripled to beat Steam's three-class rule. */
+._3Mbhnlk1Go2j8yCdjthzc7.Section.Section.Section {
+    background-color: rgb(0, 0, 0, .45);
+}
+._3Mbhnlk1Go2j8yCdjthzc7 .HeroAndLogo.Empty {
+    background: transparent;
+}
+._3Mbhnlk1Go2j8yCdjthzc7 .Gradient {
+    background: linear-gradient(to right, rgb(0, 0, 0, .6) 0%, rgb(0, 0, 0, .35) 35%, transparent 60%);
+}
+
+
+
+/*
 & Boot screen
 */
 /* Styled from here because this window is matched by the ^Steam$ patch, not by
