@@ -32,8 +32,7 @@ input.btn_medium,
 
 
 .btn_green_steamui,
-[class^="btn_green_"],
-._5b8C30zCFXs- {
+[class^="btn_green_"] {
     padding: 0 !important;
     color: #fff !important;
     text-shadow: unset !important;
@@ -42,14 +41,12 @@ input.btn_medium,
     background-color: rgb(var(--st-green)) !important;
 }
 .btn_green_steamui:hover,
-[class^="btn_green_"]:hover,
-._5b8C30zCFXs-:hover {
+[class^="btn_green_"]:hover {
     background: unset !important;
     background-color: rgb(var(--st-green-hover)) !important;
 }
 .btn_green_steamui span,
-[class^="btn_green_"] span,
-._5b8C30zCFXs- span {
+[class^="btn_green_"] span {
     background: unset !important;
     background-color: unset !important;
 }
@@ -71,7 +68,6 @@ input.btn_medium,
     background: unset !important;
     background-color: unset !important;
 }
-
 
 
 

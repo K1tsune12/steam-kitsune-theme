@@ -64,12 +64,6 @@
 
 
 /*
-! Logo align
-*/
-
-
-
-/*
 ! Collection tags
 */
 ._2b6WkTnmJxMuX1biL7aS3C {
@@ -149,9 +143,6 @@
 
 
 
-/*
-! Info tags
-*/
 /*! adding soon
 ._30acA_E0q_GuOxBqxgDJj4 .nkIX48cHLbjc0eaP5CNmM._1uS70KI6ZbUE94jUB27ioB {
     position: relative;
@@ -648,12 +639,6 @@
 }
 
 
-/*? IDK xd */
-._2pAbUZVnG9Q1TYOfdvFmtX {
-    margin-bottom: 6px;
-    padding: 0 !important;
-}
-
 
 /* Topbar */
 ._2o5c89vAnrXN8C60QTSMqO {
@@ -664,11 +649,6 @@
     line-height: unset ;
 }
 
-
-/*? IDK xd */
-._2K2No5eH-XS6QwrXUtzo2x {
-    margin-left: 12px;
-}
 
 
 /* Content Container */
@@ -1034,48 +1014,6 @@
 }
 
 
-/*
-! Achievements
-*/
-/* 100% Star */
-._2YS0EBJmY2Rvs07zZ90UIJ svg {
-    display: block !important;
-    width: 42px;
-    height: 42px;
-    left: 4px;
-    top: 6px;
-}
-._2YS0EBJmY2Rvs07zZ90UIJ svg path {
-    stroke: unset;
-    fill: rgb(var(--st-accent-1), .7);
-    d: path("M4.14 11.85L4.46 11.53L4.46 11.07L4.46 5.15L10.37 5.15L10.84 5.15L11.18 4.81L16 0L20.81 4.81L21.15 5.15L21.62 5.15L27.53 5.15L27.53 11.07L27.53 11.53L27.85 11.85L32 16L27.85 20.14L27.53 20.46L27.53 20.92L27.53 26.84L21.62 26.84L21.15 26.84L20.81 27.18L16 32L11.18 27.18L10.84 26.84L10.37 26.84L4.46 26.84L4.46 20.92L4.46 20.46L4.14 20.14L0 16L4.14 11.85Z");
-}
-._2YS0EBJmY2Rvs07zZ90UIJ svg circle {
-    cx: 16;
-    cy: 16;
-    r: 6;
-    stroke: unset;
-    fill: rgb(var(--st-accent-2));
-}
-
-/* Progressbar */
-._3ns9185LizH61StaAXuAp6 {
-    height: 6px;
-    margin: 6px 0 0;
-    border-radius: var(--st-border-radius);
-    background-color: rgb(var(--st-background));
-}
-
-._3ns9185LizH61StaAXuAp6 ._3Rm36_oeAhvIg6ZYP9l1Jj {
-    border-radius: var(--st-border-radius);
-    background-color: rgb(var(--st-accent-1));
-}
-
-/* More */
-._2aVnDeExEHiUFX0zwr_BTO:has(._2gISWIeEzZ9PNuAzVuMaWd) {
-    border-radius: var(--st-border-radius);
-    background-color: rgb(var(--st-color-1));
-}
 
 /* Divider */
 ._3ca11X3AK6npLS3emMa5Lr._3i6PczGBBYzCDZXkCDbJAD {
@@ -1399,7 +1337,6 @@
     background: none;
     background-color: rgb(var(--st-color-1));
 }
-
 
 
 

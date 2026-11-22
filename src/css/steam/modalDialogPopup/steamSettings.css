@@ -388,40 +388,6 @@ body .DialogBody .DialogControlsSection > .Panel > .Shared_Radio_Group {
 }
 
 
-/*
-! Store News & Personal Activity
-*/
-body .DialogBody .kslgScf2gDsE4jgFDZHEW ._3yay2uMeJpDxY5cg2GaJp4 {
-    display: none;
-}
-
-/*^ Notify me via / Email / Toast / Mobile / Feed labels */
-body .DialogBody .kslgScf2gDsE4jgFDZHEW .HVw3CRf81mlOgayKXNIIB {
-    margin: -1px 0 0;
-    padding: 0 24px 6px;
-    background-color: rgb(var(--st-color-2));
-}
-
-/*^ Items full width with checkboxes on the right */
-body .DialogBody .kslgScf2gDsE4jgFDZHEW .Jgod1QRim6eNfvia2_3Ac ._2tALpM7z8naXJ35Pp5fNAG {
-    flex: 1;
-    width: 100%;
-}
-
-body .DialogBody .kslgScf2gDsE4jgFDZHEW .Jgod1QRim6eNfvia2_3Ac ._2tALpM7z8naXJ35Pp5fNAG ._2VcTlXFC64Jtg9gvtT6cmY {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-body .DialogBody .kslgScf2gDsE4jgFDZHEW .Jgod1QRim6eNfvia2_3Ac ._2tALpM7z8naXJ35Pp5fNAG ._2VcTlXFC64Jtg9gvtT6cmY .PSZtxj2h3MlyYv-c9dgke {
-    flex-shrink: 0;
-    margin-left: auto;
-}
-
-
 
 /*
 & Library

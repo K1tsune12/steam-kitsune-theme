@@ -8,23 +8,13 @@
 @import url("./webkit/store/news.css");
 @import url("./webkit/store/pointsshop.css");
 @import url("./webkit/store/search.css");
-@import url("./webkit/store/stats.css");
-@import url("./webkit/store/wishlist.css");
 
 /*^ Account */
 @import url("./webkit/store/account/account.css");
-@import url("./webkit/store/account/addFunds.css");
-@import url("./webkit/store/account/cartHistory.css");
-@import url("./webkit/store/account/giftCards.css");
 @import url("./webkit/store/account/licenseAndKeyActivations.css");
-@import url("./webkit/store/account/manageSubscriptions.css");
-@import url("./webkit/store/account/purchaseHistory.css");
-@import url("./webkit/store/account/redeem.css");
 
 
 /** Community */
-/*^ Home */
-
 /*^ Market */
 @import url("./webkit/community/market/buyModal.css");
 @import url("./webkit/community/market/home.css");
@@ -60,17 +50,6 @@
 
 
 
-
-/*
-*
-! Remove after plugin is fixed
-*
-*/
-.ewJx-kmPr-8- {
-  display: none !important;
-}
-
-
 /*
 & Base
 */
@@ -104,8 +83,7 @@ body .page_content_ctn,
 body .page_content,
 body .market_page_fullwidth,
 body #BG_bottom,
-body .maincontent,
-body ._22xtsolKcQit92o-LBeRWD {
+body .maincontent {
     position: relative !important;
     width: 100% !important;
     max-width: var(--st-store-max-width) !important;
@@ -114,10 +92,6 @@ body ._22xtsolKcQit92o-LBeRWD {
     background: unset !important;
 }
 
-/*! Steam Replay page */
-body .page_content_ctn:has(._2Mj4nu3kK3ic2TFv5uwGTw._3kunV-qalJTBLAvNB9lUDg) {
-    max-width: 100% !important;
-}
 
 
 body.v6 .leftcol {
@@ -200,7 +174,6 @@ body .discount_block.no_discount .discount_prices .discount_final_price,
 body ._6QzykeEsckc-:not(:has(.Cj7J5QHbL-0-[aria-label*="%"])) .-HQzBzl6lqI- {
     color: #fff !important;
 }
-
 
 
 
@@ -679,15 +652,9 @@ html body.v6 .StoreMenuLoadingPlaceholder .PlaceholderInner {
 
 
 /*
-! Content
-*/
-
-
-
-/*
 & Live tag
 */
-html body.v6 ._2R1rYdwKuMFLsEb4WvJYdD,
+html body.v6 .NSb2xMcNnPEMjPi1dr8KB,
 html body.v6 .broadcast_live_stream_icon {
     top: 6px;
     left: 6px;
@@ -707,12 +674,12 @@ html body.v6 .broadcast_live_stream_icon {
     box-shadow: unset;
 }
 
-html body.v6 .ds_flagged ._2R1rYdwKuMFLsEb4WvJYdD,
+html body.v6 .ds_flagged .NSb2xMcNnPEMjPi1dr8KB,
 html body.v6 .ds_flagged .broadcast_live_stream_icon {
     left: calc(6px + 26px + 6px);
 }
 
-html body.v6 ._2R1rYdwKuMFLsEb4WvJYdD::before,
+html body.v6 .NSb2xMcNnPEMjPi1dr8KB::before,
 html body.v6 .broadcast_live_stream_icon::before {
     content: "";
     display: flex;
@@ -722,7 +689,6 @@ html body.v6 .broadcast_live_stream_icon::before {
     border-radius: 80px;
     background-color: rgb(var(--st-red));
 }
-
 
 
 
@@ -753,7 +719,6 @@ html body.v6 .game_review_summary.no_reviews,
 html body.v6 .game_review_summary.not_enough_reviews {
     color: #929396;
 }
-
 
 
 
@@ -825,7 +790,6 @@ html body.v6 .ds_options_tooltip .option:hover {
 
 
 
-
 /*
 & DS flags
 */
@@ -894,7 +858,6 @@ html body.v6 .ds_wishlist_flag::before {
 
 
 
-
 /*
 & Carousel container
 */
@@ -938,14 +901,12 @@ html body.v6 .ds_wishlist_flag::before {
 
 
 
-
 /*
 & Skeleton
 */
 body.v6 [class*="skeleton"] {
     border-radius: var(--st-border-radius) !important;
 }
-
 
 
 

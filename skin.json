@@ -814,33 +814,27 @@
         },
         {
             "MatchRegexString": "https://steamcommunity\\.com(/.*)?",
-            "TargetCss": "src/css/custom/custom.css",
             "TargetJs": "src/js/webkit.js"
         },
         {
             "MatchRegexString": ".ModalDialogPopup",
-            "TargetCss": "src/css/libraryroot.custom.css",
-            "TargetJs": "src/css/libraryroot.custom.js"
+            "TargetCss": "src/css/libraryroot.custom.css"
         },
         {
             "MatchRegexString": ".friendsui-container",
-            "TargetCss": "src/css/friends.custom.css",
-            "TargetJs": "src/css/friends.custom.js"
+            "TargetCss": "src/css/friends.custom.css"
         },
         {
             "MatchRegexString": "Supernav$",
-            "TargetCss": "src/css/menu.custom.css",
-            "TargetJs": "src/js/menu.custom.js"
+            "TargetCss": "src/css/menu.custom.css"
         },
         {
             "MatchRegexString": "Menu$",
-            "TargetCss": "src/css/menu.custom.css",
-            "TargetJs": "src/js/menu.custom.js"
+            "TargetCss": "src/css/menu.custom.css"
         },
         {
             "MatchRegexString": "^Steam$",
-            "TargetCss": "src/css/menu.custom.css",
-            "TargetJs": "src/js/menu.custom.js"
+            "TargetCss": "src/css/menu.custom.css"
         },
         {
 			"MatchRegexString": "^notificationtoasts_",
